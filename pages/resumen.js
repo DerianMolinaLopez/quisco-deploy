@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../layout/Layout'
 import useQuiosco from '../hook/useQuiosco'
 import ResumenProducto from '../components/ResumenProducto'
-const resumen = () => {
+const Resumen = () => {
   const {pedido} = useQuiosco()
   return (
     <Layout pagina="resumen">
@@ -21,4 +21,4 @@ const resumen = () => {
   )
 }
 
-export default resumen
+export default Resumen
