@@ -3,7 +3,7 @@ import useSWR from 'swr'
 import axios from 'axios'
 import Orden from '../components/Orden'
 import AdminLayout from '../layout/AdminLayout'
-const admin = () => {
+const Admin = () => {
 
   const fetcher = (url) => axios('/api/ordenes').then(datos=>datos.data)
   const { data, error, isLoading } = useSWR('/api/ordenes', fetcher,{refreshInterval:100})
@@ -26,4 +26,4 @@ const admin = () => {
   )
 }
 
-export default admin
+export default Admin

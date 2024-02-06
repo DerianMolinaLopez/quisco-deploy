@@ -4,7 +4,7 @@ import { useEffect, useCallback } from 'react'
 import useQuiosco from '../hook/useQuiosco'
 import { formatearDinero } from '../helpers/formatearDinero'
 
-const total = () => {
+const Total = () => {
   const { pedido,nombre,setNombre,colocarOrden, total } = useQuiosco()
 
   const comprobarPedido = useCallback(() => {
@@ -12,9 +12,7 @@ const total = () => {
     return pedido.length === 0||nombre=="" ;
   }, [pedido,nombre]);
 
-  useEffect(() => {
-
-  }, [pedido, comprobarPedido])
+  
   return (
     <Layout pagina="resumen">
       <h1 className='text-4xl font-black'>Total</h1>
@@ -43,4 +41,4 @@ const total = () => {
   )
 }
 
-export default total
+export default Total
